@@ -1,0 +1,11 @@
+import Link from "next/link"
+
+export const Menu = () => {
+    return (
+        <ul className="menu">
+            <li><Link href={"/"}>Home</Link></li>
+            <li><Link href={"/sobre#empresa"} scroll={true}>Sobre</Link></li>
+            <li><Link href={"/contato"} prefetch={false}>Contato</Link></li>
+        </ul>
+    )
+}
