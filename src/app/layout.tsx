@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Menu } from '@/components/menu';
+import Menu from '@/components/menu';
 
 export const metadata: Metadata = {
   title: 'Origamid Next',
@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Menu />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

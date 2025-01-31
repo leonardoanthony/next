@@ -1,13 +1,7 @@
-import { Acesso } from "@/components/acesso";
-import ServerFetch from "@/components/server-fetch";
-
-export default async function Home() {
+export default function HomePage() {
   return (
     <main>
-      <h1>Olá NextJS</h1>
-      <Acesso />
-      <h2>Server Fetch</h2>
-      <ServerFetch />
+      <h1>Home</h1>
     </main>
   );
 }
