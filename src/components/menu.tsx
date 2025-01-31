@@ -8,6 +8,7 @@ export const Menu = () => {
             <li><Link href={"/contato"} prefetch={false}>Contato</Link></li>
             <li><Link href={"/imc"}>IMC</Link></li>
             <li><Link href={"/produtos"}>Produtos</Link></li>
+            <li><Link href={"/cursos"}>Cursos</Link></li>
         </ul>
     )
 }
