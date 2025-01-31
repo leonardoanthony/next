@@ -6,6 +6,7 @@ export const Menu = () => {
             <li><Link href={"/"}>Home</Link></li>
             <li><Link href={"/sobre#empresa"} scroll={true}>Sobre</Link></li>
             <li><Link href={"/contato"} prefetch={false}>Contato</Link></li>
+            <li><Link href={"/imc"}>IMC</Link></li>
         </ul>
     )
 }
