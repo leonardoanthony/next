@@ -1,9 +1,3 @@
-type PageParams = {
-    params : {
-        id: string;
-    }
-}
-
 type Produto = {
     id: number;
     nome: string;
@@ -13,9 +7,16 @@ type Produto = {
     importado: number;
 }
 
-export default async function ProdutoInfoPage({params}: PageParams){
+type Params = {
+    params: Promise<{ id: string }>
+}
+ 
 
-    const response = await fetch(`https://api.origamid.online/produtos/${params.id}`);
+export default async function ProdutoInfoPage({params}: Params){
+    const { id } = await params
+
+    
+    const response = await fetch(`https://api.origamid.online/produtos/${id}`);
     const data = await response.json() as Produto;
 
     return (

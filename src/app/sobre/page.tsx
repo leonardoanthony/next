@@ -1,7 +1,7 @@
 import { Width } from "@/components/width";
 // 'use client'
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
 // const Width = dynamic(() => import('@/components/width'), {ssr: false});
 

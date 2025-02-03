@@ -1,8 +1,4 @@
-type PageParams = {
-    params: {
-        slug: string[]
-    }
-}
+
 
 type Aula = {
     id: number;
@@ -24,7 +20,11 @@ type Curso = {
     aulas: Aula[]
 }
 
-export default async function CursosPage({params}: PageParams){
+type Params = {
+    params: Promise<{ slug: string[] }>
+}
+ 
+export default async function CursosPage({params}: Params){
 
     const {slug} = await params
 
