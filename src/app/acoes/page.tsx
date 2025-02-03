@@ -1,22 +1,19 @@
-'use client';
-
-import React from 'react';
 
 type Acao = {
   simbolo: string;
   atualizada: string;
 };
 
-export default function AcoesPage() {
-  const [acao, setAcao] = React.useState<Acao | null>(null);
+export default async function AcoesPage() {
 
-  React.useEffect(() => {
-    fetch('https://api.origamid.online/acoes/lua')
-      .then((response) => response.json())
-      .then((json) => setAcao(json));
-  }, []);
+  const response = await fetch('https://api.origamid.online/acoes/lua', {
+    next: {
+      revalidate: 5
+    }
+  })
 
-  if (acao === null) return null;
+  const acao = (await response.json()) as Acao;
+
 
   return (
     <main>
