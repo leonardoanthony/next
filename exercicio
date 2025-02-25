@@ -1,15 +1,12 @@
 - Crie uma rota chamada api/login
 - A rota deve receber um username e password via POST
 - Utilize a api https://api.origamid.online/conta/login
-- Envie o username e password para a api e salve o token de acesso nos cookies
-(httpOn1y)
+- Envie o username e password para a api e salve o token de acesso nos cookies (httpOn1y)
 - A rota deve retornar se o login foi bem sucedido ou não
 - Crie um formulário usando client components para fazer o login
 - Crie uma rota chamada api/perfil
 - Diretamente no server component, faça um fetch para a api de perfil
 - Utilize a api https://api.origamid.online/conta/perfil
-- Use o token de acesso salvo nos cookies para fazer a requisição (header
-Authorization: Bearer token)
+- Use o token de acesso salvo nos cookies para fazer a requisição (header Authorization: Bearer token)
 - Modifique 0 menu para mostrar 0 nome do usuário Iogado
-- Se 0 usuário não estiver autorizado, mostre um link para a página de login no
-menu
+- Se 0 usuário não estiver autorizado, mostre um link para a página de login no menu
