@@ -1,19 +1,19 @@
 import { cookies } from "next/headers";
+import { NextRequest } from "next/server";
 
-export async function GET(){
+export async function POST(request: NextRequest){
+
+    const bodyRequest = await request.json();
     
     const response = await fetch('https://api.origamid.online/conta/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            username: 'dog',
-            password: 'dogs'
-        })
+        body: JSON.stringify(bodyRequest)
     });
     if(!response){
-        return Response.json(response);
+        return Response.json({status: false});
     }else{
 
         const data = await response.json();
@@ -22,6 +22,6 @@ export async function GET(){
                 httpOnly: true,
             });
             
-        return Response.json(data);
+        return Response.json({status: true});
     }
 }
