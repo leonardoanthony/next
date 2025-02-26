@@ -9,7 +9,7 @@
         "next.config.ts": true,
         "next-env.d.ts": true,
         ".gitignore": true,
-        "eslint.config.mjs": true
-        // "mod*": true
+        "eslint.config.mjs": true,
+        "mod*": true
     }
 }
