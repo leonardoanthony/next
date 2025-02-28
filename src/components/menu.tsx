@@ -9,6 +9,9 @@ export default function Menu() {
       <li>
         <Link href="/login">Login</Link>
       </li>
+      <li>
+        <Link href="/loginServer">Login Server</Link>
+      </li>
     </ul>
   );
 }
