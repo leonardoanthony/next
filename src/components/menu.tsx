@@ -12,6 +12,9 @@ export default function Menu() {
       <li>
         <Link href="/loginServer">Login Server</Link>
       </li>
+      <li>
+        <Link href="/acoes">Ações</Link>
+      </li>
     </ul>
   );
 }
