@@ -7,10 +7,13 @@ export default function Menu() {
         <Link href="/">Home</Link>
       </li>
       <li>
-          <Link href="/produtos">Produtos</Link>
+        <Link href="/login">Login</Link>
       </li>
       <li>
-        <Link href="/produtos/adicionar">Adicionar Produtos</Link>
+        <Link href="/loginServer">Login Server</Link>
+      </li>
+      <li>
+        <Link href="/acoes">Ações</Link>
       </li>
     </ul>
   );

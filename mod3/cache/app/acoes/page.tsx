@@ -13,7 +13,8 @@ export default async function AcoesPage(){
     const response = await fetch('https://api.origamid.online/acoes/lua', {
         // cache: "no-store"
         next: {
-            revalidate: 5
+            // revalidate: 5
+            tags: ['acoes']
         }
     });
 
