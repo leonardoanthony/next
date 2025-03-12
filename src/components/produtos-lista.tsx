@@ -1,11 +1,13 @@
 import { Produto } from "@/@types/Produto";
 
-export default async function ProdutosLista(){
+export default async function ProdutosLista({espera} : {espera?:number}){
     let produtos: Produto[] = []
-    const response = await fetch('https://api.origamid.online/produtoss', {
-                          next: {
-                              revalidate: 10
-                          }
+    if(espera) await new Promise(resolve => setTimeout(resolve, espera));
+    const response = await fetch('https://api.origamid.online/produtos', {
+                        //   next: {
+                        //       revalidate: 10
+                        //   }
+                        cache: "no-cache"
                       })
     
     try {
