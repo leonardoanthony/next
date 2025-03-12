@@ -8,6 +8,7 @@ export default async function ProdutosPage() {
                       }
                   })
 
+  if(!response.ok) throw new Error('Erro ao carregar produtos');
   const produtos = await response.json() as Produto[];
 
   return (
