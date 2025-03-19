@@ -1,6 +1,18 @@
-import Link from 'next/link';
+"use client";
 
-export default async function Menu() {
+import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
+import { useEffect } from 'react';
+
+export default function Menu() {
+  const params = useParams();
+  const pathName = usePathname();
+
+  useEffect(() => {
+    console.log('pathName', pathName)
+  }, [pathName])
+
+  console.log(pathName)
   return (
     <ul className="menu">
       <li>

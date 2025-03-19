@@ -1,4 +1,4 @@
-import ProdutosLista from "@/components/produtos-lista";
+import ProdutosLista from "../../components/produtos-lista";
 import { Suspense } from "react";
 
 export default async function ProdutosPage() {
